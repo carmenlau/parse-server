@@ -318,7 +318,7 @@ describe('Parse.Relation testing', () => {
         
        return Parse.Object.saveAll(parents).then(() => {
           var query = new Parse.Query(ParentObject);
-          query.equalTo("objectId", parent.id);
+          query.equalTo("objectId", parent2.id);
           query.equalTo("toChilds", childObjects[2]);
          
           return query.find().then((list) => {
